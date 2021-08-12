@@ -1,0 +1,84 @@
+body{
+
+    background-image: url("texture-en-bois-de-cendre-le-fond-du-hardwood-dur-151509136.jpg");
+    margin:0;
+    padding:0;
+
+}
+div{
+    margin:0;
+    padding:0;
+}
+p{
+    margin:0;
+    padding:0;
+}
+header{
+    padding:0;
+    margin:0;
+    position: sticky;
+    top:0;
+}
+.fix{
+
+    display:flex;
+    justify-content: space-between;
+
+    font-size:25px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+}
+.logo{
+    width:150px;
+    height:auto;
+    z-index: 10;
+    margin-left: 0;
+    margin-right: 0;
+    margin:0;
+    padding:0;
+}
+
+/*#fiche{
+
+    width:1400px;
+    margin-top:10px;
+    background-color:blanchedalmond;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    padding-bottom: 10px;
+}*/
+#monselect{
+    margin-left: 100px;
+}
+.feuille{
+    display:flex;
+    flex-direction: column;
+
+    width:1400px;
+    height:auto;
+    text-align: center;
+    background-color:blanchedalmond;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    padding-bottom: 10px;
+
+}
+
+img{
+
+    width:940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+}
+.contraste{
+    background-color: yellow;
+    margin-left:auto;
+    margin-bottom: auto;
+}
