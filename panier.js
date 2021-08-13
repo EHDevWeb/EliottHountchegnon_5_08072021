@@ -148,7 +148,20 @@ document.getElementById('submitForm').addEventListener('click', (e) => {
     body: JSON.stringify({contact,products}),
 
     
+})
+.then(function(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
+}).then(function(response) {
+    console.log("ok");
+    document.location.href="succes.html"; 
+}).catch(function(error) {
+    console.log(error);
+    window.alert("Veuillez vérifier les informations du formulaire puis réessayer");
 });
+
 /*const envoi = {
     method: 'POST',
     headers: {
