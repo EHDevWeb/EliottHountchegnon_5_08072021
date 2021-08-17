@@ -114,6 +114,63 @@ document.querySelector('#suppOurs').addEventListener('click', () => {splice
 /*firstN = document.getElementById('name').value;
 let firstName*/
 
+let form = document.querySelector('#formulaire');
+console.log(form.mail);
+
+/* Créer valideText pour nom
+        valideChamp pour addresse et ville */
+
+form.firstname.addEventListener('change', function() {
+    validText(this)
+});
+
+form.lastname.addEventListener('change', function() {
+    validText(this)
+});
+
+form.adress.addEventListener('change', function() {
+    validText(this)
+});
+
+form.city.addEventListener('change', function() {
+    validText(this)
+});
+const validText = function (inputText) {
+    let nameRegExp = new RegExp(
+        '^[a-zA-Z0-9]+$'
+        );
+    let testText = nameRegExp.test(inputText.value);
+    console.log(testText);
+
+    if (testText) {
+        console.log("ok");
+    } else{
+        window.alert("Non Valide");
+    }
+
+}
+
+
+form.mail.addEventListener('change', function() {
+    validMail(this)
+});
+
+const validMail = function (inputMail) {
+    let emailRegExp = new RegExp(
+        '^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g'
+        );
+    let testEmail = emailRegExp.test(inputMail.value);
+    console.log(testEmail);
+    let small = inputMail.nextElementSibling;
+
+    if (testEmail) {
+        small.innerHTML = "Addresse mail valide"
+    } else{
+        small.innerHTML = "Addresse mail non valide"
+    }
+
+};
+
 document.getElementById('submitForm').addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -124,6 +181,8 @@ document.getElementById('submitForm').addEventListener('click', (e) => {
         city: document.getElementById('city').value,
         email: document.getElementById('mail').value
     }
+
+
     /*let contact={
         firstName: "pere",
         lastName: "noel",
